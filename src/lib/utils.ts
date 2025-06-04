@@ -7,5 +7,5 @@ export function cn(...inputs: ClassValue[]) {
 
 export function getUrl() {
   const isDev = process.env.NODE_ENV === 'development'
-  return isDev ? 'http://localhost:3000' : 'https://snippet.timoner.com'
+  return isDev ? 'http://localhost:3000' : 'https://snippettool.com'
 }
