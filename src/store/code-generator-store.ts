@@ -7,6 +7,7 @@ interface CodeGeneratorStore {
   showLineNumbers: boolean;
   title: string;
   isExporting: boolean;
+  includePadding: boolean;
   uploadedImages: UploadedImage[];
   exportOptions: ExportOptions;
   setCode: (code: string) => void;
@@ -14,6 +15,7 @@ interface CodeGeneratorStore {
   setShowLineNumbers: (show: boolean) => void;
   setTitle: (title: string) => void;
   setIsExporting: (isExporting: boolean) => void;
+  setIncludePadding: (include: boolean) => void;
   addImage: (image: UploadedImage) => void;
   updateImage: (id: string, updates: Partial<UploadedImage>) => void;
   removeImage: (id: string) => void;
@@ -26,6 +28,7 @@ export const useCodeGeneratorStore = create<CodeGeneratorStore>((set) => ({
   showLineNumbers: true,
   title: '',
   isExporting: false,
+  includePadding: true,
   uploadedImages: [],
   exportOptions: {
     format: 'portrait',
@@ -37,6 +40,7 @@ export const useCodeGeneratorStore = create<CodeGeneratorStore>((set) => ({
   setShowLineNumbers: (show) => set({ showLineNumbers: show }),
   setTitle: (title) => set({ title }),
   setIsExporting: (isExporting) => set({ isExporting }),
+  setIncludePadding: (includePadding) => set({ includePadding }),
   addImage: (image) =>
     set((state) => ({
       uploadedImages: [...state.uploadedImages, image],

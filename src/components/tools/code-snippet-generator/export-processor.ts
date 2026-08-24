@@ -27,12 +27,15 @@ function getDimensions(format: ExportFormat): ExportDimensions {
 function createExportContainer(
   dimensions: ExportDimensions,
   exportOptions: ExportOptions,
+  includePadding: boolean,
   title?: string
 ): HTMLDivElement {
   const container = document.createElement("div");
-  container.style.padding = "48px";
+  if (includePadding) {
+    container.style.padding = "48px";
+    container.style.borderRadius = "16px";
+  }
   container.style.background = "transparent";
-  container.style.borderRadius = "16px";
   container.style.position = "relative";
   container.style.display = "flex";
   container.style.flexDirection = "column";
@@ -175,10 +178,11 @@ export async function exportToPng(
   exportOptions: ExportOptions,
   stamps: Stamp[],
   uploadedImages: UploadedImage[],
-  title?: string
+  title?: string,
+  includePadding = true
 ): Promise<string> {
   const dimensions = getDimensions(exportOptions.format);
-  const exportContainer = createExportContainer(dimensions, exportOptions, title);
+  const exportContainer = createExportContainer(dimensions, exportOptions, includePadding, title);
   
   const processedContent = await processContentForExport(
     content,

@@ -21,6 +21,7 @@ export function CodeSnippetGenerator() {
     showLineNumbers,
     exportOptions,
     title,
+    includePadding,
     setCode,
     setIsExporting,
     uploadedImages,
@@ -187,7 +188,8 @@ export function CodeSnippetGenerator() {
         exportOptions,
         stamps,
         uploadedImages,
-        title
+        title,
+        includePadding
       );
 
       const link = document.createElement("a");
