@@ -22,6 +22,7 @@ const EXPORT_FORMATS = {
   social: [
     { id: "x-post" as const, label: "X Post", dimensions: "1200×675" },
     { id: "x-card" as const, label: "X Card", dimensions: "1200×628" },
+    { id: "x-small" as const, label: "X Small", dimensions: "800×628" },
     {
       id: "linkedin-post" as const,
       label: "LinkedIn Post",

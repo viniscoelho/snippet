@@ -74,7 +74,7 @@ export function CodePreview({
           </div>
         </div>
       </div>
-      <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-secondary to-primary rounded-xl blur opacity-30 group-hover:opacity-50 transition duration-1000 animate-gradient-x -z-10"></div>
+      <div className="no-export absolute -inset-0.5 bg-gradient-to-r from-primary via-secondary to-primary rounded-xl blur opacity-30 group-hover:opacity-50 transition duration-1000 animate-gradient-x -z-10"></div>
     </div>
   );
 }

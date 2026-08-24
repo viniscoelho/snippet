@@ -16,6 +16,7 @@ function getDimensions(format: ExportFormat): ExportDimensions {
     landscape: { width: 1920, height: 1080 },
     "x-post": { width: 1200, height: 675 },
     "x-card": { width: 1200, height: 628 },
+    "x-small": { width: 800, height: 628 },
     "linkedin-post": { width: 1200, height: 1200 },
     "linkedin-article": { width: 1200, height: 644 },
   };
@@ -30,8 +31,7 @@ function createExportContainer(
 ): HTMLDivElement {
   const container = document.createElement("div");
   container.style.padding = "48px";
-  container.style.background =
-    "linear-gradient(to bottom, rgba(158, 195, 58, 0.05), rgba(36, 135, 199, 0.05))";
+  container.style.background = "transparent";
   container.style.borderRadius = "16px";
   container.style.position = "relative";
   container.style.display = "flex";

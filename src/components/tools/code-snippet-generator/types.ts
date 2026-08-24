@@ -3,6 +3,7 @@ export type ExportFormat =
   | "landscape" 
   | "x-post"
   | "x-card"
+  | "x-small"
   | "linkedin-post"
   | "linkedin-article";
 
