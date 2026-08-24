@@ -30,7 +30,7 @@ export const useCodeGeneratorStore = create<CodeGeneratorStore>((set) => ({
   exportOptions: {
     format: 'portrait',
     fitContent: true,
-    includeWatermark: true,
+    includeWatermark: false,
   },
   setCode: (code) => set({ code }),
   setLanguage: (language) => set({ language }),
